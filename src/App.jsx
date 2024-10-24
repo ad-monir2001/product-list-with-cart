@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <main className="container mx-auto flex gap-7 my-4">
+      <main className="container mx-auto flex flex-col md:flex-row gap-7 my-4">
         <Deserts handleAddCart={handleAddCart}></Deserts>
         <Cart
           cart={cart}

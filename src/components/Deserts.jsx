@@ -10,9 +10,9 @@ const Deserts = ({handleAddCart}) => {
       .then((data) => setDeserts(data));
   }, []);
   return (
-    <div className="w-2/3">
+    <div className="md:w-2/3">
       <h2 className="font-bold text-3xl">Deserts: {deserts.length}</h2>
-      <div className='grid grid-cols-3 gap-4 mt-8'>
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-4 mt-8'>
       {deserts.map((desert, index) => (
         <Desert 
         key={index}
