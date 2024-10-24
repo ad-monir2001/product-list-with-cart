@@ -1,7 +1,7 @@
 import Item from './Item';
 import Modal from './Modal';
 
-const Cart = ({ cart, price }) => {
+const Cart = ({ cart, price,handleDeleteItem }) => {
   return (
     <div className="w-1/3 rounded-lg p-8 bg-slate-100">
       <h2 className="font-bold text-xl text-[#c0775f]">
@@ -9,7 +9,7 @@ const Cart = ({ cart, price }) => {
       </h2>
       <div>
         {cart.map((item, idx) => (
-          <Item key={idx} item={item}></Item>
+          <Item key={idx} item={item} handleDeleteItem={handleDeleteItem}></Item>
         ))}
       </div>
 
@@ -17,7 +17,7 @@ const Cart = ({ cart, price }) => {
         <h1 className="font-semibold text-base text-red-500">Order Total</h1>
         <h1 className="font-bold text-xl text-green-500">${price}</h1>
       </div>
-      <h2 className="font-medium text-base bg-gray-400 rounded-lg p-2 text-white">
+      <h2 className="font-medium text-base bg-gray-400 rounded-lg p-2 text-white text-center">
         This is a Carbon-neutral delivery.
       </h2>
       <button onClick={() => document.getElementById('my_modal_5').showModal()} className="btn text-white bg-red-500 rounded-full w-full my-8">
